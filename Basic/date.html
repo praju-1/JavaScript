@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let display = new Date();
+        document.write("Current Date and Time : ",display+ "<br>");
+
+        // getDate() - date
+        document.write("Day :", display.getDate() + "<br>");
+
+        // getFullyear()
+        document.write("Access fullyear :", display.getFullYear() + "<br>");
+
+        // getDay() - return 0 to 6
+        document.write(display.getDay() + "<br>");
+
+        // getmonth - 0 - 11
+        document.write(display.getMonth() + "<br>");
+
+        //gethour
+        document.write(display.getHours() + "<br>");
+
+        // Extend day by two days
+        let today = new Date();
+        document.write(today + "<br>");
+        document.write(today.getDay() + 2 + "<br>");
+
+        // setting custom hours
+        today.setHours(0, 12, 0, 0)
+        document.write(today + "<br>");
+    </script>
+</body>
+</html>
