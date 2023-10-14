@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // try...catch block
+        // try block contain the execution
+        try {
+            alert("Welcome guest!");
+        }
+        // catch block contain the error part of code which is used to handle error
+        catch (err) {
+            document.getElementById("demo").innerHTML = err.message;
+        }
+
+
+        // try...catch in function
+        function myFunc() {
+            var a = 100;
+            var b = 0;
+
+            try {
+                if (b == 0) {
+                    throw ("Divide by zero error.");
+                } else {
+                    var c = a / b;
+                    alert(c);
+                }
+            }
+            catch (e) {
+                alert("Error: " + e);
+            }
+        }
+        myFunc()
+
+        // try...catch...finally
+
+        try {
+            var a = 2;
+            if (a == 2)
+                document.write("ok" + "<br>");
+        }
+        catch (Error) {
+            document.write("Error found" + e.message);
+        }
+        finally {
+            document.write("Value of a is 2 ");
+        }
+
+
+    </script>
+</body>
+
+</html>
