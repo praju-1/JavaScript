@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // conditional sstatement
+        // if else ifelse
+
+        // syntax of if
+        // if (expression/condition){
+        //     excution part
+        // }
+
+        let hours = prompt("Enter running hour : ");
+
+        if (hours <= 12){
+            alert("Good Morning")
+        }else if( hours <= 18){
+            alert("Good afternoon")
+        }
+        else{
+            alert("Good evening")
+        }
+
+
+        // Example of if-else if statements
+
+        // Define a variable to represent the score
+        let score = 85;
+
+        // Check the score and provide a corresponding message
+        if (score >= 90) {
+            console.log("Excellent! You got an A.");
+        } else if (score >= 80) {
+            console.log("Good job! You got a B.");
+        } else if (score >= 70) {
+            console.log("Well done! You got a C.");
+        } else if (score >= 60) {
+            console.log("You passed with a D.");
+        } else {
+            console.log("Unfortunately, you did not pass.");
+        }
+
+
+
+        // switch syntax
+
+        // switch (expression/condition){
+        //     case value1:
+        //         statement
+        //     break;
+        //     case value2:
+        //         statement
+
+        //     default:
+        //         statement
+        // }
+
+        let skills = prompt("Enter your skills : ");
+
+        switch(skills){
+            case "HTML":
+                document.write("HTML is easy to learn")
+            break;
+            case "CSS":
+                document.write("CSS used for Styling")
+            break;
+            case "Javascript":
+                document.write("It is used for dynamic website")
+            break;
+            default:
+                alert("Enter valid skills")
+        }
+
+    </script>
+
+</body>
+
+</html>
