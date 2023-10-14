@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in Javascript</title>
+</head>
+
+<body>
+
+    <script>
+        // 1. Arithmatic operator - + - * / % ** ++ --
+        // 2. Logical operator - AND NOT OR
+        // 3. Comparision - > < >= <= == === != !==
+        // 4. typeof
+        // 5. Bitwise
+        // 6. ternary
+
+        // 1. Arithmatic operator
+        let x = 5;
+        let y = 10;
+        let c = x ** y
+        let d = x + y;
+        document.write(c);
+        document.write(d);
+
+        // we can also add strings
+
+        let result = "Javascript" + " " +
+            "Is" + "fun"
+        document.write(result)
+
+        let a = 5;
+        a--;
+        document.write(a)
+
+        let i = 3;
+        i1 = ++i;
+        document.write(i1)
+
+
+        // 2. Assignments operators 
+
+        // x += y  is similar to x = x+y
+        let b = 5;
+        b *= 10;
+        document.write(b)
+
+
+        // 3. Comparision operators
+
+        let num1 = 6;
+        let num2 = 7;
+        document.write(num1 !== num2)
+
+        // === - equal value and equal types
+        // It returns true and false as output
+
+        let num3 = 6;
+        document.write(num3 !== '6')
+        let num4 = 7;
+        document.write(num3 === num4);
+
+
+        //  4. Logical - AND OR NOT
+
+
+        const n = 5, n1 = 3;
+        const result1 = (n < 6 && n1 > 5)
+        document.write(result1)
+
+        document.write(10 == 20 || 20 != 33)
+
+        document.write(!(10 == 20))
+
+
+        // 5. typeof - typeof variable
+
+        let word = "5";
+        let letter = 7;
+        // let z =
+        document.write(typeof (word));
+
+        // Ternary operators
+        // syntax
+        // condition ? value if true : value if false
+
+        let marks = 40;
+        let result_new = (marks < 39) ? "pass" : "Fail"
+        console.log(result_new);
+
+    </script>
+
+</body>
+
+</html>
