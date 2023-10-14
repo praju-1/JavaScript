@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="a1"></p> -->
+    <script>
+        // syntax of function
+        // function includes 2 section 1. defination 2. Declaration 3. function calling
+
+        // function function_name(){
+        // block of code
+        // }
+
+        function msg() {
+            let user = "This is our First function";
+            alert(user)
+        }
+
+        // creating calculate function to perform some operation
+
+        let num1 = [1.5, 20, 30, 40, 50];
+        let num2 = num1.map(calculate);
+        document.write(num2 + "<br>");
+
+        let num3 = num1.filter(calculate);
+        document.write(num3 + "<br>");
+
+        function calculate(value) {
+            return value < 2.5;
+        };
+
+
+        // local variable and global
+        let data = "This is global variable"
+        function variables() {
+            let user = "This is local variable" + " " + data;
+            alert(user)
+
+            let info = "This is local variable"
+            alert(info)
+        }
+        msg();
+        alert(data);
+
+        alert(info);
+
+        // 4types of function
+        // 1. Traditional function
+        // 2. Callback function
+        // 3. Arrow function
+        // 4. Anonymous function
+
+
+        // 4 Ways of function
+        // 1. function with no parameter
+        // 2. function with parameter
+        // 3. function with default parameter
+        // 4. function with return parameter
+
+
+        // function with no parameter
+        function msg() {
+            return alert("Hello")
+        }
+        msg()
+
+        // Function with parameter
+        function total(a, b) {
+            alert(a + b);
+        }
+        total(2, 3)
+
+        // 3. function with default parameter
+        function greet(name = "john") {
+            document.write(`Hello ${name}!`)
+        }
+
+        greet();
+        greet("alice");
+
+
+        // 4. function with return parameter
+        function addnumber(a, b) {
+            return a + b;
+        };
+        let result = addnumber(20, 30)
+        document.write(result);
+
+        // Function with multiple arguments
+
+        function sum(...args) {
+            let sum = 0;
+            for (let arg of args) sum += arg;
+            return sum;
+        }
+
+        let x = sum(4, 9, 16, 25, 29, 100, 66, 77, 1000, 2344)
+        document.write(x);
+
+
+        // arrow function
+
+        let msg = () => {
+            return "Hello world !"
+        }
+        alert(msg())
+
+
+        // Arrow function with parameters
+        let calculation = (x, y, z) => {
+            return (x + y + z);
+        }
+        document.write(calculation(1, 2, 3));
+
+
+        // callback function
+
+        function display(name, callback) {
+            document.write('Hi ' + " " + name, " ")
+            callback()
+        };
+
+        function callME() {
+            document.write("I am callback function")
+        };
+        // passing function as an argument
+        display('Peter', callME);
+
+        // anonymous function
+        let show = function (){
+            document.write("This is anonymous function")
+        };
+
+        show();
+
+        // another way to use anonymous function using object structure
+
+        let person = {
+            firstName: 'John',
+            lastName: 'Doe'
+        };
+
+        (function () {
+            document.write(person.firstName + ' ' + person.lastName);
+        })(person);
+
+    </script>
+</body>
+
+</html>
