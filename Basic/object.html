@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // syntax of object creation
+        // let user = {}
+        // let user = new object()
+
+        let user = {
+            name: "john",
+            id: 123,
+            department: 'IT'
+        }
+        // alert will not give proper output for your object
+        // alert(user)
+        
+        document.write(user)
+
+        console.log(user.id);
+
+        // alert will return only name value
+        alert(user.name)
+
+        // If you want to delete any pair
+        delete user.name
+
+
+        // alert(user.name)
+
+        // document.write(user["id"])
+        user.age = 25;
+        console.log(user);
+
+
+    </script>
+</body>
+
+</html>
