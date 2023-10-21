@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a1"></p>
+    <!-- <button type="button" onclick="this.style.color=red">Submit</button> -->
+    <script>
+
+        // for(let i=0; i<=5; i+=2){
+        //     alert(i);
+        // }
+        
+        const person = {
+            firstname : "Aditi",
+            lastname : "Sharma",
+            id :123,
+            userDetail: function() {
+                return this.firstname + " " + this.lastname + " " +  this.id;
+            }
+
+        }
+        document.write(person.userDetail());
+
+    </script>
+</body>
+</html>
