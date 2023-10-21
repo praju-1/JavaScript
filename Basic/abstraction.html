@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // It hides unneccessary information from user
+        // IT only shows output to user with particular method called
+
+        class Car{
+            price(){
+                console.log("This is car class");
+            }
+        }
+
+        class Honda extends Car{
+            price(){
+                console.log("Price of Honda is 6 lac");
+            }
+        }
+
+        class BMW extends Car{
+            price(){
+                console.log("Price of BMW is 10 lac");
+            }
+        }
+
+        class Maruti extends Car{
+            price(){
+                console.log("Price of Maruti is 8 lac");
+            }
+        }
+
+        class Tesla extends Car{
+            price(){
+                console.log("Price of Tesla is 90 lac");
+            }
+        }
+
+        const h = new Honda();
+        h.price();
+
+        const t = new Tesla();
+        t.price();
+    </script>
+</body>
+</html>
