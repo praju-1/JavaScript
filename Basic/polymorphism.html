@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // same function with different meaning
+
+        class Cat{
+            constructor(name){
+                this.name = name;
+            }
+
+            display(){
+                console.log("Name of the cat is : ", this.name);
+            }
+        }
+
+        const cat = new Cat("Kitty");
+
+        class Dog{
+            constructor(name){
+                this.name = name
+            }
+            display(){
+                console.log("Name of the Dog is : ", this.name);
+            }
+        }
+
+        const dog = new Dog("Tiger");
+
+        function info(a){
+            a.display();
+        }
+
+        info(cat);
+        info(dog)
+
+    </script>
+</body>
+
+</html>
