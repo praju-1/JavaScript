@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class Employee{
+            constructor(name){
+                this.name = name;
+            }
+            allData(){
+                return "Name of the employee is: " + " "+ this.name;
+            }
+        }
+
+        // let data = new Employee("Peter");
+        // document.write(data.allData());
+        // document.write(data.msg());
+
+        class Admin extends Employee{
+            constructor(name, year){
+                // this.name = name;
+                super(name)
+                this.year = year;
+            }
+            adminData(){
+                return this.allData() + " " + "Joining year is : " + this.year;
+            }
+        }
+
+        let data = new Admin("Peter", 2023)
+        document.write(data.adminData());
+
+    </script>
+</body>
+</html>
