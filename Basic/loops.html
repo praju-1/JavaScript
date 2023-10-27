@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // loops
+        // types of loops - 1. for loops 
+        //                  2. for of
+        //                  3. for in
+        //                  4. While
+        //                  5. do While
+
+        // syntax of for loop
+
+        // for (statement1, statement2, statement3){
+        //     // block of code
+        // }
+
+        // statement1 = initilization
+        // statement2 = condition
+        // statement3 = increment (afterthough)
+
+        // print number upto 10
+        for (let i= 1; i<=10; i++){
+            alert(i)
+        }
+
+         // let i
+         for (let i = 0; i <= 10; i++) {
+            if (i == 3) { continue }
+            alert(i);
+        }
+
+        // for of loop will use for iterable datatype
+        // for (variable of iterable){
+        //     block of code
+        // }
+
+        let numbers = [11, 12, 13, 14, 15];
+        for(const num of numbers){
+            document.write(num + " ")
+        }
+
+        // for in operate on object
+        // for in syntax
+        // for (key in object){
+        //     block of code
+        // }
+
+        const capital = {
+            a: "Delhi",
+            b: "Mumbai",
+            c: "Pune"
+        }
+
+        for (let key in capital) {
+            console.log(key + " : " + capital[key]);
+        }
+
+
+        // do-while syntax
+        // do {
+        // code part
+        // }while(conditi)on
+
+        let j = 0;
+        do{
+            alert(j);
+            j++
+        }while(j <= 3)
+
+
+        // while syntax
+
+        // while(condition){
+        //     // block of code
+        // }
+
+        // Print number from 0 to 5
+        let i = 0;
+        while(i <= 5){
+            alert(i)
+            i++;
+        }
+
+
+        // Below format belongs to infinite loop
+        // while(true){
+        //     alert("Hello world");
+        // }
+    </script>
+</body>
+
+</html>
