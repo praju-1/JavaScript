@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Creating function for regular expression which search a specific word
+        function regexps() {
+            let str = "This is Javascript Regular expression";
+            let regex = new RegExp("regular");
+            let rex = regex.test(str);
+
+            document.write(rex);
+        }
+        regexps()
+
+        // As we can pass pattern in regular expression as below to replace any particular string
+
+        const string1 = "Hello world";
+        document.write(string1 + "<br>")
+        // This is pattern for to find world in given string
+        const pattern = /world/
+        document.write(string1.replace(pattern, 'Javascript'))
+
+
+
+        // splitting strings into array elements
+        const regex1 = /[\s,]+/;
+        const result2 = 'Hello world! '.split(regex1);
+        console.log(result2); // ['Hello', 'world!', '']
+
+        //  searching for number
+        const str1 = "Hello you can contact me on 1234789640 for any issue"
+        // regex for 10 digit number
+        const reg1 = new RegExp(/\d{10}/, 'g');
+        document.write(str1.match(reg1));
+
+
+        // with pattern
+        // const str1 = "my contact number is (123)-456-7890"
+        // let pattern = /\d{10}/
+        // document.write(str1.match(pattern));
+
+
+        // with testing - gives output as boolean form
+        const regex = new RegExp(/^a...s$/);
+        // test will return resul as boolean
+        console.log(regex.test('alias')); // true
+
+        // you can pass directly
+        // const regex = new RegExp(/^a...s$/);
+        // document.write(regex.test('geeksforgeeks alias is a 1234789640 computer science platform'));
+
+
+        let str2 = "This company has generated $50 million profit in FY2023 Q1 while last year it was $222 billion in FY2022 Q3";
+        // specific format
+        let patterns = /FY\d{4} Q[1-4]/;
+        document.write(str2.match(patterns));
+
+        // different pattern for regex
+
+        // p1 - /FY\d{4} Q\d/
+        // p2 - /FY\d{4} Q[1-4]/
+        // p3 - /\$\d* \w+/ -  for money
+        // p4 - \$[\d\.]+ \w+ -  which include decimal point also
+
+
+        // searching the phone number pattern
+        const regex2 = /(\d{3})\D(\d{3})-(\d{4})/g;
+        const result3 = regex2.exec('My phone number is: 555 123-4567.');
+        document.write(result3); // ["555 123-4567", "555", "123", "4567"]
+
+
+    </script>
+</body>
+
+</html>
