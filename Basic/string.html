@@ -7,30 +7,32 @@
 </head>
 <body>
     <script>
-        // let data = "Javascript is fun";
-        // document.write(data + "<br>");
-        // document.write(data.length +"<br>");
+        let data = "Javascript is fun";
+        document.write(data + "<br>");
+        // return length of string
+        document.write(data.length +"<br>");
 
         // extraction of string 
         // 1. slice 2. substring 3. substr()
+        // both positive and negative index you can pass on
 
-        // document.write(data.slice(-5, -2) +"<br>")
+        document.write(data.slice(-5, -2) +"<br>")
 
-        // document.write(data.substring(-5, -2) +"<br>")
+        document.write(data.substring(-5, -2) +"<br>")
 
-        // document.write(data.substr(-3) +"<br>") - length number
+        // length number
+        document.write(data.substr(-3) +"<br>")
 
-        // replace
-        // document.write(data.replace("J", "b") +"<br>")
+        // replace of string
+        document.write(data.replace("J", "b") +"<br>")
 
         // lastindexOf
 
-        // string padding 
+        // string padding (can increase length of string with specific character)
         // padstart
         // padend
-
-        // document.write(data.padStart(15, " ") +"<br>");
-        // document.write(data.padEnd(16, "*") +"<br>")
+        document.write(data.padStart(15, " ") +"<br>");
+        document.write(data.padEnd(16, "*") +"<br>")
 
         // Below method gives output in Boolean result
         // startswith
@@ -49,11 +51,12 @@
         // template literal
         //  - ${}
 
-        // let data = "Javascript is fun";
-        // document.write(data + "<br>");
+        // 
+        let data1 = "Javascript is fun";
+        document.write(data1 + "<br>");
        
-        // let updated_string = `Hello world "Javascript is fun"`;
-        // document.write(updated_string);
+        let updated_string = `Hello world "Javascript is fun"`;
+        document.write(updated_string);
 
         let name = "John";
         let id = 123;
