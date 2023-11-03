@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // syntax
+        // let arr = [];
+        // let arr2 = new Array();
+
+        let arr = ["abc", "bcd", "html", "CSS"]
+
+        // splice method
+        // It changes the content of array by removing it or replacing existing element or adding new elements
+
+        // splice(index, before/after, element)
+        const names = ["John", "Peter", "Willium", "Prince"];
+        document.write(names+ "<br>")
+
+
+        // concat - It join two arrays
+        let odd_no = [3, 5, 7, 9, 3, 7, 35, 9, 37, 41, 55];
+        // slice(start, end)
+
+        document.write(odd_no.slice(3, 6))
+
+        // LastIndexOf(searchelement, fromindex)
+        document.write(arr.lastIndexOf("html", 0))
+
+        document.write(odd_no.lastIndexOf(35, 0))
+
+        document.write(odd_no + "<br>")
+
+
+        let even_no = [2, 4, 6, 8];
+        document.write(even_no + "<br>")
+        document.write(odd_no.concat(even_no));
+
+        names.join(" * ")
+        // fill method
+        names.fill("HTML", -3)
+        document.write(names.join(" _ "))
+        fill(value, start, end)
+
+        // sorting value from array
+        names.sort()
+
+        // Reversing array
+        names.reverse()
+
+        // replace
+        names.splice(2, -1, "Hello")
+        names.splice(3, 1)
+        names.splice(2, 0, "Snehal", "Stark")
+       
+        delete arr[3]
+        arr[4] ="Javscript"
+        document.write(arr + "<br>");
+
+        // unshift add new element at first position
+        document.write(arr + "<br>");
+        document.write(arr.unshift('Javascript') + "<br>");
+        document.write(arr + "<br>");
+        
+        // push() add element to the array
+        document.write(arr + "<br>")
+        document.write(arr.push("Fullstack"));
+        document.write(arr)
+
+        // pop() method remove the element from array
+        document.write(arr + "<br>");
+        document.write(arr.pop() + "<br>");
+        document.write(arr + "<br>")
+        document.write(arr.pop() + "<br>");
+
+        // shift - remove first element 
+        document.write(arr + "<br>")
+        document.write(arr.shift() + "<br>");
+        document.write(arr + "<br>")
+        document.write(arr.shift() + "<br>");
+        document.write(arr + "<br>")
+
+        console.log(arr[0]);
+        document.write(arr.toString())
+
+        // let arr = [];
+        // alert(arr)
+        // arr.push("javacript", "HTML", "CSS", "fullstack", "javacript", "HTML", "CSS", "fullstack", "javacript", "HTML", "CSS", "fullstack", "javacript", "HTML", "CSS", "fullstack");
+        // alert(arr.length);
+
+        // let number = new Array(11, 12, 3, 45, 57, 78)
+        // alert(number)
+    </script>
+</body>
+</html>
