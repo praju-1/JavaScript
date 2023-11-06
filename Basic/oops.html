@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  class syntax
+        // class classname{
+        //     constructor(){
+        //     }
+        // }
+
+        class Employee{
+            constructor(cname, year){
+                this.name = cname;
+                this.year = year;
+            }
+        }
+
+        // Creating instance of class
+        let data = new Employee("IBM", 2023);
+        document.write("Name of company is " + " " + data.name + " " + "Joiining year is " + " " + data.year)
+
+    </script>
+</body>
+</html>
