@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Regular Expression</title>
 </head>
 
 <body>
     <script>
+        // modifiers we can use in Regular expression are
+        // 1. i -case insensitive
+        // 2. g - for global match
+        // 3. m - for multiline match
 
         // Creating function for regular expression which search a specific word
         function regexps() {
@@ -75,7 +79,6 @@
         const regex2 = /(\d{3})\D(\d{3})-(\d{4})/g;
         const result3 = regex2.exec('My phone number is: 555 123-4567.');
         document.write(result3); // ["555 123-4567", "555", "123", "4567"]
-
 
     </script>
 </body>
