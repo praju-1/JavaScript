@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboar event</title>
+</head>
+
+<body>
+    <h2>The input box will change when key realeased</h2>
+    <input id="bg" onkeyup="changeBg()" placeholder="Write something" style="color: white;">
+
+    <script>
+
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        function changeBg() {
+            var x = document.getElementById('bg');
+            x.style.backgroundColor = 'rgb(' + a + ', ' + b + ', ' + c + ')';
+
+            a += 100;
+            b += a + 50;
+            c += b + 70;
+            if (a > 255) a = a - b;
+            if (b > 255) b = a;
+            if (c > 255) c = b
+
+        }
+
+        // function keydownevent(){
+        //     document.getElementById("input1");
+        //     alert("pressed a key")
+        // }
+    </script>
+</body>
+
+</html>
