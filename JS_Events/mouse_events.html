@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse_event</title>
+    <style>
+        #track{
+            background-color: goldenrod;
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- button created for click event -->
+    <!-- <button onclick="clickevent()">click Me</button> -->
+
+    <!-- <p onmouseover="mouseover()">Keep cursor over me</p> -->
+
+
+    <!-- <div id="hover" onmouseout="out()"  style="background-color: crimson; height: 100px; width: 100px;"></div> -->
+
+    <!-- For mousemove event -->
+    <!-- <p>Move your mouse to see its location</p>
+    <div id="track"></div>
+    <p id="log"></p> -->
+
+    
+
+    <script>
+        // 1. Mouse event
+        // - click - onclick - Click on particular section/button.
+        // - Mouseover - onmouseover - cursor is on particular position
+        // - mouseout - onmouseout - remove trigger from position
+        // - mousedown- onmousedown - when you press button of mouse
+        // - mouseup - onmouseup - release button of mouse
+        // - mousemove- onmousemove - movement of mouse
+
+        // 1. Click event
+        // function clickevent(){
+        //     document.write("This is onclick event")
+        // }
+
+        // 2. Mouseoverevent()
+        // function mouseover(){
+        //     alert("This is mouseover event")
+        // }
+
+        // 3. Mouseoutevent()
+        // function out(){
+        //     var e = document.getElementById("hover")
+        //     e.style.display = 'none'
+        // }
+
+        // 4. Mousemoveevent()
+        // here will use queryselector(#/.)
+        // clientX - property return horizontal coordinate
+        // clientY - Vertical co-ordinate
+        // let track = document.querySelector('#track')
+
+        // track.addEventListener('mousemove', (e) => {
+        //     let log = document.querySelector('#log');
+        //     log.innerText = `Screen X/Y : (${e.screenX}, ${e.screenY})
+        //     ClientX/Y : (${e.clientX}, ${e.clientY})`
+        // });
+
+        //
+
+
+
+
+    </script>
+</body>
+
+</html>
