@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // the javascript predefined methods - alert()
+        // userdefined functions - 
+        // parent class/inheritance \\
+
+        // function overriding on Javascript predefined method
+        function alert() {
+            console.log("Thhis is overriding function");
+        };
+        alert();
+
+
+        // function overriding on Userdefined Function
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+
+        function sum(a, b) {
+            return a + b
+        }
+
+        console.log(sum(5, 10, 3));
+
+
+        // Function overriding on Parent class/Inheritance
+        // parent class
+        class Calculation {
+            calc() {
+                document.write("Lets starts")
+            }
+        }
+
+        // child class
+        class Square extends Calculation {
+            calc(x) {
+                document.write(x * x)
+            }
+        }
+
+        // Creating instance of class
+        var sq = new Square();
+        sq.calc(6)
+    </script>
+</body>
+
+</html>
