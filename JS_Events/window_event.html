@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Example about Window event -->
+    <!-- 4 types of Window events  -->
+    <!-- 1. load - onload event 
+    2. unload - onunload event
+    3. resize - onresize event
+    -->
+
+
+    <!-- onload event -->
+
+    <img onload="alert('Image load successfully')"
+        src="https://media.istockphoto.com/id/1277767891/photo/various-fresh-ripe-pumpkins-as-background.jpg?s=1024x1024&w=is&k=20&c=yWkG3TYyf_8KL1GHERtcIGlHay5DVBsQc2W-zxl6zxM="
+        alt="fruit_image">
+
+    <!-- onunload event -->
+    <h1>onunload event Example</h1>
+    <p>Refresh it...</p>
+
+    <!-- onresize event -->
+
+    <h1>Window Resize Event Example.</h1>
+    <p>Try to resizing the browser window to see alert.</p>
+
+    <script>
+
+        // function for onunload event
+        function showunloadalert() {
+            alert("Leaving the page")
+        }
+        window.onunload = showunloadalert()
+
+        // Function for resize event
+        function showResize() {
+            alert("Window Resized");
+        }
+        window.onresize = showResize()
+    </script>
+
+</body>
+
+</html>
