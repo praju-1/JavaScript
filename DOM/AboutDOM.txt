@@ -1,0 +1,26 @@
+1. Finding HTML elements
+       methods -
+        1. document.getElementById()
+        2. document.getElementsByClassName()
+        3. document.getElementsByTagName(name)
+        4. document.getElementsByClassName(name)
+
+2. Working with Attributes
+    1. element.getAttribute(name)
+    2. element.setAttribute(name, value)
+    3. element.hasAttribute(name)
+    4. element.removeAttribute(name)
+
+
+3. Changing HTML elements
+         properties
+        1. element.innerHTML = new HTML content
+        2. element.attribute = new value
+        3. element.style.element = new style
+
+4. Adding and deleting elements
+            1. document.createElement(element)
+            2. document.removeChild(element)
+            3. document.appendChild(element)
+            4. document.replaceChild(new, old)
+            5. document.write()
