@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1 id="demo"></h1>
+
+  <script>
+
+    // Asychronous JS contain the following 4 parameter
+    // 1. callback 
+    // 2. Asychronus()
+    // 3. promises
+    // 5. Async/Await
+
+
+    // Logic for Asychronous
+
+    // Providing some delay in userinterface
+    setTimeout(myfunction, 1000);
+    function myfunction() {
+      document.getElementById("demo"), innerHTML = "Asynchronous Delay"
+    }
+
+    // Specifying some interval in execution
+    setInterval(myfunction, 3000)
+    function myfunction() {
+      let d = new Date()
+      document.getElementById('demo').innerHTML =
+        d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds();
+    }
+
+
+    // Promises
+    // It has 4 states
+    // 1. fullfilled - promise succeed
+    // 2. rejected - failed
+    // 3. pending - not fullfilled not reject
+    // 4. settled - fullfilled or reject
+
+
+    let promise = new Promise(function (resolve, reject) {
+      const x = "Javascript";
+      const y = 19;
+
+      // According to this expression our promises will resolve
+      // It also contain then/Catch method
+      if (x === y) {
+        resolve();
+      }
+      else {
+        reject()
+      }
+    });
+    promise.then(function () {
+      document.write("successfull")
+    }).catch(function () {
+      document.write('Some error has occured')
+    });
+
+
+
+    // then() 
+    let promise1 = new Promise(function (resolve, reject) { resolve('Hello World..!') })
+    promise1.then(function (successMessage) {
+      console.log(successMessage);
+    }, function (errorMessage) {
+      console.log(errorMessage);
+    })
+
+
+
+    // Async/Await
+    // syntax of async
+    // async function name(par1, par2){
+    //     // statement
+    // }
+
+    const getdata = async () => {
+      let data = "Hello world!";
+      return data;
+    }
+    getdata().then(data => console.log(data));
+
+    // await
+    async function f() {
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done"), 3000)
+      });
+
+      let result = await promise;
+      alert(result);
+    }
+
+    f();
+
+
+  </script>
+
+</body>
+
+</html>
