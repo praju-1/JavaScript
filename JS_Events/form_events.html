@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Example about Forms event -->
+    <!-- 4 types of form events  -->
+    <!-- 1. focus - onfocus event 
+    2. blur  - onblur event
+    3. submit - onsubmit event
+    4. change - onchange event -->
+
+    <!-- focus event -->
+    <h2>Enter something here in input box</h2>
+    <input type="text" id="input1" onfocus="focusevent()">
+
+
+    <!-- submit event -->
+
+    <p>When you submit form, a function triggered which alerts some text</p>
+    <form action="" onsubmit="myfunction()">
+        Enter name: <input type="text" name="fname">
+        <input type="submit" value="submit">
+    </form>
+
+    <!-- blur event -->
+    <p>When something in the input box and the click elsewhere in the document body</p>
+    <input onblur="alert(this.value)">
+
+
+    <!-- change event -->
+
+    <input onchange="alert(this.value)" type="number" style="margin-left: 45%;">
+    
+    <script>
+        // function for focus event...
+        function focusevent() {
+            document.getElementById("input1").style.background = "aqua";
+        }
+
+        // function for submit event
+        function myfunction() {
+            alert("form submitted successfully")
+        }
+
+    </script>
+</body>
+
+</html>
