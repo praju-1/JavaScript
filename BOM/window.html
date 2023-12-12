@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click Button to interact with the window</p>
+    <button onclick="openNewwindow()"> open Window</button>
+    <button onclick="closeWindow()"> open Window</button>
+
+    <script>
+
+        document.write("Innerwidth is : " + window.innerWidth + '<br>' + "Innerheight is : "+ window.innerHeight + '<br>')
+
+        document.write("Outerwidth is : " + window.outerWidth + '<br>' + "Outerheight is : "+ window.outerHeight)
+
+         alert("Hello")
+        // window.alert()
+
+        let result = confirm("Are you sure want to delete ?");
+        let message = result ? 'You cllicked ok button' :  'You clicked on cancel button'
+        alert(message)
+
+        let result1 = window.prompt("Enter you name")
+        // providing some time to execute
+        var timeoutID;
+        function ShowAlert(){
+            timeoutID = setTimeout(alert, 5000, 'setTimeout Demo!')
+        }
+
+
+        let newWindow;
+        // function for open window
+        function openNewwindow() {
+            newWindow = window.open('https://in.bookmyshow.com/explore/home/pune', '_self', 'width = 800 height = 600')
+        }
+
+        // function for close opened window
+
+        function closeWindow() {
+            if (newWindow) {
+                newWindow.close()
+            }
+        }
+
+    </script>
+</body>
+</html>
