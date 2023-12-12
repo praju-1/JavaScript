@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- window.location.href - return url of current page
+    window.location.hostname - return hostname
+    window.location.pathname - path of current file
+    window.location.protocol - http/https
+    window.location.assign() - load new document -->
+    <script>
+        document.write("Url of this page is : " + window.location.href + "<br>")
+        document.write("Hostname of this page is : " + window.location.hostname + "<br>")
+        document.write("Path this page is : " + window.location.pathname + "<br>")
+        document.write("Protocol of this page is : " + window.location.protocol + "<br>")
+        document.write("Port number of this page is : " + window.location.port + "<br>")
+        document.write(window.location.assign('https://in.bookmyshow.com/explore/home/pune'))
+
+    </script>
+</body>
+</html>
