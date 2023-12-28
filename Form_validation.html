@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_v</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 class="h1">HTML FORM</h1>
+            <form action="">
+                <label for="name">Enter UserName : </label>
+                <input type="text" id="t1" placeholder="NAME" required><br>
+                <span id="s1" style="color: rgb(255,38,0); margin-left: 30%;"></span>
+                <br><br>
+
+                <label for="email">Enter Email : </label>
+                <input type="email" id="t2" placeholder="EMAIL"><br>
+                <span id="s2" style="color: rgb(255,38,0); margin-left: 30%;"></span>
+                <br><br>
+
+                <label for="email">Enter Password : </label>
+                <input type="password" id="t3" placeholder="PASSWORD"><br>
+                <span id="s3" style="color: rgb(255,38,0); margin-left: 30%;"></span>
+                <br><br>
+
+                <label for="age">Enter Age : </label>
+                <input type="number" id="t4" placeholder="AGE"><br>
+                <span id="s4" style="color: rgb(255,38,0); margin-left: 30%;"></span>
+                <br><br>
+
+                <label for="number">Enter Number : </label>
+                <input type="number" id="t5" placeholder="NUMBER"><br>
+                <span id="s5" style="color: rgb(255,38,0); margin-left: 30%;"></span>
+                <br><br>
+
+                <input type="button" id="b1" onclick="validationOf()" value="Register">
+
+            </form>
+
+            <script>
+                function validationOf(value) {
+                    let r = "";
+
+                    let uname = document.getElementById('t1').value;
+                    if (uname.length == 0) {
+                        r += "User Name should not be empty..!" + "<br>";
+
+                    }
+                    document.getElementById('s1').innerHTML = r;
+
+
+                    let r1 = "";
+                    let pwd = document.getElementById('t2').value;
+                    if (pwd.length == 0) {
+                        r1 += "Password should not be empty..!" + "<br>";
+                    }
+                    document.getElementById('s2').innerHTML = r1;
+
+                    let r2 = "";
+                    let cpwd = document.getElementById('t3').value;
+
+                    if (cpwd.length == 0) {
+                        r2 += "Confirm Password should not be empty..!" + "<br>";
+                    }
+                    if (pwd != cpwd) {
+                        r2 += "Password and Confirm Password should not be same!!!"
+                    }
+                    document.getElementById('s3').innerHTML = r2;
+
+                    let r3 = "";
+                    let age = document.getElementById('t4').value;
+
+                    if (age.length == 0) {
+                        r3 += "Age should not be Zero"
+                    }
+                    if (age == 0) {
+                        r3 += "Age should not be zero"
+                    }
+
+                    document.getElementById('s4').innerHTML = r3;
+
+                    let r4 = "";
+                    let phone = document.getElementById('t5').value;
+
+                    if (phone.length == 0) {
+                        r4 += "Phone no. should not be Empty..!!";
+                    }
+                    if (phone.length != 10) {
+                        r4 += "Phone no. Should be 10 Digit only";
+                    }
+
+                    document.getElementById('s5').innerHTML = r4;
+                }
+            </script>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
