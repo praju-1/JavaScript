@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- list structure for adding elements -->
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+
+    <!-- list structure for replacing elements -->
+    <ul id="myList">
+        <li>HTML</li>
+        <li id="a1">CSS</li>
+        <li>Javascript</li>
+    </ul>
+
+    <!-- Button for adding elements -->
+    <button onclick="addElement()">Add element</button>
+
+    <!-- Button for replace elements -->
+    <button onclick="replaceElement()">Replace</button>
+
+    <!-- Button for remove elements -->
+    <button onclick="removeElement()">Remove</button>
+
+    <script>
+        function addElement() {
+            // here only add single elements
+            const menu = document.querySelector('#menu')
+            let li = document.createElement('li');
+            li.textContent = 'Products';
+            menu.appendChild(li)
+        }
+
+        function replaceElement() {
+            // logic to replace elements
+
+            const list = document.getElementById("myList").children[0]
+
+            const newnode = document.createTextNode("Fullstack")
+
+            list.replaceChild(newnode, list.childNodes[0])
+        }
+
+        function removeElement() {
+
+            // logic to replace elements
+
+            const list = document.getElementById("myList").children[0]
+
+            if (list.hasChildNodes()) {
+                list.removeChild(list.firstChild)
+            }
+        }
+    </script>
+</body>
+
+</html>
