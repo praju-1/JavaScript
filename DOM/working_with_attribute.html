@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://media.istockphoto.com/id/1573329496/photo/multi-layers-color-texture-3d-papercut-layers-in-gradient-vector-banner-carving-art-cover.jpg?s=1024x1024&w=is&k=20&c=EmGEp2Z1LJmjaxofvy_hxMgyIe0t_39Ophh-CG74_Vc="
+        target="_blank" id="js">Remove Attribute</a>
+
+    <script>
+
+        // let btnsend = document.querySelector('#btnsend')
+        // if(btnsend){
+        //     let disabled = btnsend.hasAttribute('disabled')
+        //     document.write(disabled)
+        // }
+        //     btnsend.setAttribute('name','send')
+        //     btnsend.setAttribute('disabled', '')
+        // }
+
+
+        let link = document.querySelector('#js')
+        if (link) {
+            // link.getAttribute('target')
+            link.removeAttribute('target')
+            let target = link.getAttribute('href')
+            document.write("Value of an attribute is : ", target)
+        }
+        document.write(link.getAttribute('target'))
+
+    </script>
+
+</body>
+
+</html>
