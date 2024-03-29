@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goforward()">Go Forward</button>
+    <button onclick="goToSpecific()"> Go to specific</button>
+
+
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+
+        function goforward(){
+            window.history.forward()
+        }
+
+        function goToSpecific(){
+            window.history.go(1)
+        }
+
+        document.write("<br> Length of the history : " +  history.length)
+
+
+        // history.back() - previous page
+        // history.forward() - next page
+        // history.go() - specific page
+        // history.length
+
+
+        // screen.height
+        // screen.availHeight
+        // screen.width
+        // screen.availWidth
+        // screen.colorDepth
+        // screen.pixelDepth
+
+
+        // document.write("width of screen : " + screen.width)
+
+        // document.write("<br>height of screen : " + screen.height)
+
+        // document.write("<br>height of screen : " + screen.availHeight)
+
+        // document.write("<br>height of screen : " + screen.availWidth)
+    </script>
+</body>
+</html>
