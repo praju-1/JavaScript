@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>The http request object</h2>
+    <button type="button" onclick="loadDoc()">Get all collection</button>
+    <br><br>
+
+    <table id="demo"></table>
+
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                myfunction(this);
+            }
+            xhttp.open("GET", "info.xml");
+            xhttp.send();
+        }
+
+        function myfunction(xml) {
+            const xmlDoc = xml.responseXML;
+            // const x = xmlDoc.getElementsByTagName("CD");
+            const x = xmlDoc.getElementsByTagName('CD')
+            
+            let table = "<tr><th>Artist</th><th>Title</th></tr>";
+
+            for (let i = 0; i < x.length; i++) {
+                table += "<tr><td>" + x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + "</td><td>" +
+
+                    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + "</td></tr>"
+            }
+
+            document.getElementById("demo").innerHTML = table
+        }
+    </script>
+
+</body>
+
+</html>
+
