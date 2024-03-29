@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="message">A paragraph tag</p>
+
+    <form name="form1">
+        Enter Name: <input type="text" name="name">
+        <input type="button" onclick="printvalue()" value="print name">
+    </form>
+
+    <div>This is paragraph</div>
+    <div>Here we count total paragraph tag</div>
+    <div>Example of Tagname</div>
+    <div>Hello</div>
+    <button onclick="countpara()"> Count paragraph</button>
+
+    <script>
+
+         function countpara(){
+            var totalcount = document.getElementsByTagName('button')
+            alert("total no. of p tag : " + totalcount.length)
+        }
+
+        function printvalue(){
+            var name = document.form1.name.value;
+            alert("Welcome : "+ name)
+        }
+
+        const p = document.getElementById("message")
+        console.log(p);
+    </script>
+</body>
+
+
+</html>
